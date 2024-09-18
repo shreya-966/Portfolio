@@ -1,0 +1,107 @@
+@import "../../global.scss";
+
+.top{
+    width: 100% ;
+    height: 70px;
+    border-radius: 1px;
+    background-color: #1F305E;
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: all 1s ease;
+    font-family: "New Amsterdam", sans-serif;
+
+    .wrapper{
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left{
+            display: flex;
+            align-items: center;
+            
+            
+            .logo{
+                font-size: 35px;
+                font-weight: 800;
+                text-decoration: none;
+                color: aliceblue;
+                letter-spacing: 2px;
+                margin-right: 20px;
+            }
+            .itemcontainer{
+                display: flex;
+                margin-left: 30px;
+                cursor: pointer;
+                align-items: center;
+
+
+                @include mobile{
+                    display: none;
+                }
+                .icon{
+                    font-size: 25px;
+                    margin-right: 5px;
+                }
+
+                span{
+                    font-size: 15px;
+                    font-weight: 600;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+
+        .right{
+                .rightside{
+                    width: 32px;
+                    height: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                    justify-content: space-between;
+                    overflow-y: hidden;
+
+                    span{
+                        width: 100%;
+                        height: 3px;
+                        background-color: aliceblue;
+                        border-radius: 5px;
+                        transform-origin: left;
+                        transition: all 1s ease;
+                    }
+                }
+        }
+    }
+    &.active{
+        background-color: #cae9ff;
+        color: #011F5B;
+
+        .left{
+            .logo{
+                color: #011F5B;
+            }
+    
+        }
+        .right{
+            .rightside{
+                overflow-y: hidden;
+                span{
+                    &:first-child{
+                        background-color: #011F5B;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
+                    &:last-child{
+                        background-color: #011F5B;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}

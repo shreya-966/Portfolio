@@ -1,0 +1,23 @@
+.app{
+    height: 100vh;
+
+
+    .sections{
+        height: calc(100vh - 70px);
+        width: 100%;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;/*will not leave a section in half , will always show a complete section*/
+        scrollbar-width: none; // for firefox
+        &::-webkit-scrollbar{//for all the other browsers
+            display: none;
+        }
+
+        > *{/*for each element inside*/
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
