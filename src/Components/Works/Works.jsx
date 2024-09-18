@@ -9,21 +9,22 @@ const Works = () => {
   const data = [
     {
       id: "1",
+      icon: "./assets/globe.png",
+      title: "E-Commerce Website",
+      desc:
+        "A completely responsive E-commerce website displaying the features of the website.",
+      img:
+        "./assets/ecom.png",
+    }
+    ,
+    {
+      id: "2",
       icon: "./assets/mobile.png",
       title: "Weather App",
       desc:
         "Get to know about the climatic condition of any place .",
       img:
         "./assets/weather.png",
-    },
-    {
-      id: "2",
-      icon: "./assets/globe.png",
-      title: "E-Commerce App",
-      desc:
-        "A completely responsive E-commerce website displaying the features of the website.",
-      img:
-        "./assets/ecom.png",
     },
     {
       id: "3",
